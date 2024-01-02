@@ -1,0 +1,114 @@
+[
+  {
+    "id": "icon1",
+    "name": "Nando",
+    "color": "blue",
+    "productLink": "/nando-tech",
+    "shopLink": "/nando-tech-shop"
+  },
+  {
+    "id": "icon2",
+    "name": "Viessmann",
+    "color": "red",
+    "productLink": "/viessmann-tech",
+    "shopLink": "/viessmann-tech-shop"
+  },
+  {
+    "id": "icon1",
+    "name": "Daikin",
+    "color": "green",
+    "productLink": "/daikin-tech",
+    "shopLink": "/daikin-tech-shop"
+  },
+  {
+    "id": "icon2",
+    "name": "Samsung",
+    "color": "blue",
+    "productLink": "/samsung-tech",
+    "shopLink": "/samsung-tech-shop"
+  },
+  {
+    "id": "icon1",
+    "name": "LG",
+    "color": "red",
+    "productLink": "/LG-tech",
+    "shopLink": "/LG-tech-shop"
+  },
+  {
+    "id": "icon2",
+    "name": "Hitachi",
+    "color": "green",
+    "productLink": "/hitachi-tech",
+    "shopLink": "/hitachi-tech-shop"
+  },
+  {
+    "id": "icon1",
+    "name": "Grant",
+    "color": "blue",
+    "productLink": "/grant-tech",
+    "shopLink": "/grant-tech-shop"
+  },
+  {
+    "id": "icon2",
+    "name": "Vaillant",
+    "color": "red",
+    "productLink": "/vaillant-tech",
+    "shopLink": "/vaillant-tech-shop"
+  },
+  {
+    "id": "icon1",
+    "name": "Bosch",
+    "color": "green",
+    "productLink": "/bosch-tech",
+    "shopLink": "/bosch-tech-shop"
+  },
+  {
+    "id": "icon2",
+    "name": "Talesun",
+    "color": "blue",
+    "productLink": "/talesun-tech",
+    "shopLink": "/talesun-tech-shop"
+  },
+  {
+    "id": "icon1",
+    "name": "Longi",
+    "color": "red",
+    "productLink": "/longi-tech",
+    "shopLink": "/longi-tech-shop"
+  },
+  {
+    "id": "icon2",
+    "name": "Renesola",
+    "color": "green",
+    "productLink": "/renesola-tech",
+    "shopLink": "/renesola-tech-shop"
+  },
+  {
+    "id": "icon1",
+    "name": "LDK",
+    "color": "blue",
+    "productLink": "/ldk-tech",
+    "shopLink": "/ldk-tech-shop"
+  },
+  {
+    "id": "icon2",
+    "name": "Jinko",
+    "color": "red",
+    "productLink": "/jinko-tech",
+    "shopLink": "/jinko-tech-shop"
+  },
+  {
+    "id": "icon1",
+    "name": "Suntech",
+    "color": "green",
+    "productLink": "/suntech-tech",
+    "shopLink": "/suntech-tech-shop"
+  },
+  {
+    "id": "icon2",
+    "name": "Risen",
+    "color": "blue",
+    "productLink": "/risen-tech",
+    "shopLink": "/risen-tech-shop"
+  }
+]
