@@ -22,7 +22,7 @@ function App() {
         <motion.div
           className={`${selectedIcon ? 'shrink' : 'column left-column'}`}>
           <div className='icons-container'>
-            {selectedIcon && <img className='reset-btn' onClick={handleReset} src="../src/assets/icons/vertical-lines.svg" />}
+            {selectedIcon && <img className='reset-btn' onClick={handleReset} src="../public/icons/vertical-lines.svg" />}
             <div className={`${selectedIcon ? 'no-grid' : 'icons show-all'}`}>
               {
                 productData.map((iconData) => {
@@ -84,7 +84,7 @@ function App() {
                   <span>t</span>
                   <span>s</span>
                 </h2>
-                <img src="../src/assets/icons/vertical-lines.svg" />
+                <img src="../public/icons/vertical-lines.svg" />
               </div>
             )
           }
