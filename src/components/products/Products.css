@@ -1,0 +1,204 @@
+.section-products .row {
+  min-height: 100vh;
+}
+
+.row {
+  display: flex;
+  overflow: hidden;
+}
+
+.column {
+  width: 100%;
+}
+
+.left-column {
+  flex: 0 0 66.6%;
+  background: linear-gradient(53deg, #FFF 0%, #EAEAEA 82.01%);
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.shrink {
+  flex: 0 0 50%;
+  background: linear-gradient(53deg, #FFF 0%, #EAEAEA 82.01%);
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.right-column {
+  flex: 0 0 33.3%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-column .background {
+  height: 100%;
+  width: 100%;
+  background-image: url('../public/images/darwin_tree.png');
+  background-repeat: no-repeat;
+  background-size: 100% 120%;
+  scale: 1.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.right-column .caption {
+  position: relative;
+  z-index: 1;
+}
+
+.caption img {
+  padding-top: 2rem;
+}
+
+.caption .text {
+  margin: .5rem 0;
+  text-align: left;
+  font-size: 72pt;
+  opacity: .1;
+}
+
+.caption hr {
+  border: thin solid;
+  border-color: white;
+}
+
+.caption .links {
+  display: flex;
+  flex-direction: column;
+}
+
+.caption .links a {
+  text-decoration: none;
+  color: #f4f4f4;
+  padding: .25rem 0;
+  transition: all .3s cubic-bezier(.77,0,.175,1);
+  transition-delay: .3s;
+}
+
+.caption .links a:hover span {
+  color: #f9f9f9;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+
+.vertical-text {
+  line-height: 1;
+  margin: auto;
+}
+
+.vertical-text span {
+  display: block;
+  font-weight: 100;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.vertical-text span:nth-child(1) { color: #222; }
+.vertical-text span:nth-child(2) { color: #666; }
+.vertical-text span:nth-child(3) { color: #777; }
+.vertical-text span:nth-child(4) { color: #888; }
+.vertical-text span:nth-child(5) { color: #999; }
+.vertical-text span:nth-child(6) { color: #aaa; }
+.vertical-text span:nth-child(7) { color: #bbb; }
+.vertical-text span:nth-child(8) { color: #ccc; }
+
+.icons-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.reset-btn {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  scale: 1.05;
+  transition: all .3s cubic-bezier(.77,0,.175,1);
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+}
+
+.icons.no-gird {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons.show-all .icon {
+  display: block;
+}
+
+.no-grid .icon {
+  display: none;
+}
+
+.no-grid .icon.selected {
+  display: block;
+  transform: scale(1.2);
+  transition: all .3s cubic-bezier(.77,0,.175,1);
+}
+
+.icons svg {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all .3s cubic-bezier(.77,0,.175,1);
+}
+
+.icons svg:hover {
+  transform: scale(1.2);
+}
+
+.icons svg:hover path {
+  fill: var(--hover-color);
+}
+
+.no-grid .icon.selected svg path {
+  fill: var(--selected-color);
+}
+
+.icons .icon {
+  display: none;
+}
+
+.icons.selected {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.icons .icon.selected {
+  transform: scale(1.2);
+}
+
+.right-column.expanded {
+  flex: 0 0 50%;
+}
+
+.product-info {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-info.visible {
+  opacity: 1;
+}

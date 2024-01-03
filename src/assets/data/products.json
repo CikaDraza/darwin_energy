@@ -1,114 +1,114 @@
 [
   {
-    "id": "icon1",
-    "name": "Nando",
-    "color": "blue",
-    "productLink": "/nando-tech",
-    "shopLink": "/nando-tech-shop"
+    "id": "brain",
+    "name": "Brain",
+    "color": "#0EAAC0",
+    "productLink": "/brain",
+    "shopLink": "/brain-shop"
   },
   {
-    "id": "icon2",
-    "name": "Viessmann",
-    "color": "red",
-    "productLink": "/viessmann-tech",
-    "shopLink": "/viessmann-tech-shop"
+    "id": "ando",
+    "name": "Ando",
+    "color": "#CDD62B",
+    "productLink": "/ando",
+    "shopLink": "/ando-shop"
   },
   {
-    "id": "icon1",
-    "name": "Daikin",
-    "color": "green",
-    "productLink": "/daikin-tech",
-    "shopLink": "/daikin-tech-shop"
+    "id": "chill",
+    "name": "Chill",
+    "color": "#6AC0B0",
+    "productLink": "/chill",
+    "shopLink": "/chill-shop"
   },
   {
-    "id": "icon2",
-    "name": "Samsung",
-    "color": "blue",
-    "productLink": "/samsung-tech",
-    "shopLink": "/samsung-tech-shop"
+    "id": "eeveecee",
+    "name": "Eeveecee",
+    "color": "#8EB15B",
+    "productLink": "/eeveecee",
+    "shopLink": "/eeveecee-shop"
   },
   {
-    "id": "icon1",
-    "name": "LG",
-    "color": "red",
-    "productLink": "/LG-tech",
-    "shopLink": "/LG-tech-shop"
+    "id": "emon",
+    "name": "Emon",
+    "color": "#A3CF99",
+    "productLink": "/emon",
+    "shopLink": "/emon-shop"
   },
   {
-    "id": "icon2",
-    "name": "Hitachi",
-    "color": "green",
-    "productLink": "/hitachi-tech",
-    "shopLink": "/hitachi-tech-shop"
+    "id": "feu",
+    "name": "Feu",
+    "color": "#ED6E46",
+    "productLink": "/feu",
+    "shopLink": "/feu-shop"
   },
   {
-    "id": "icon1",
-    "name": "Grant",
-    "color": "blue",
-    "productLink": "/grant-tech",
-    "shopLink": "/grant-tech-shop"
+    "id": "fluxx",
+    "name": "Fluxx",
+    "color": "#FFCC07",
+    "productLink": "/fluxx",
+    "shopLink": "/fluxx-shop"
   },
   {
-    "id": "icon2",
-    "name": "Vaillant",
-    "color": "red",
-    "productLink": "/vaillant-tech",
-    "shopLink": "/vaillant-tech-shop"
+    "id": "gloww",
+    "name": "Gloww",
+    "color": "#FFDD06",
+    "productLink": "/gloww",
+    "shopLink": "/gloww-shop"
   },
   {
-    "id": "icon1",
-    "name": "Bosch",
-    "color": "green",
-    "productLink": "/bosch-tech",
-    "shopLink": "/bosch-tech-shop"
+    "id": "muki",
+    "name": "Muki",
+    "color": "#7BB388",
+    "productLink": "/muki",
+    "shopLink": "/muki-shop"
   },
   {
-    "id": "icon2",
-    "name": "Talesun",
-    "color": "blue",
-    "productLink": "/talesun-tech",
-    "shopLink": "/talesun-tech-shop"
+    "id": "nendo",
+    "name": "Nendo",
+    "color": "#028998",
+    "productLink": "/nendo",
+    "shopLink": "/nendo-shop"
   },
   {
-    "id": "icon1",
-    "name": "Longi",
-    "color": "red",
-    "productLink": "/longi-tech",
-    "shopLink": "/longi-tech-shop"
+    "id": "ogo",
+    "name": "Ogo",
+    "color": "#009FE3",
+    "productLink": "/ogo",
+    "shopLink": "/ogo-shop"
   },
   {
-    "id": "icon2",
-    "name": "Renesola",
-    "color": "green",
-    "productLink": "/renesola-tech",
-    "shopLink": "/renesola-tech-shop"
+    "id": "ozz",
+    "name": "Ozz",
+    "color": "#5EC5EB",
+    "productLink": "/ozz",
+    "shopLink": "/ozz-shop"
   },
   {
-    "id": "icon1",
-    "name": "LDK",
-    "color": "blue",
-    "productLink": "/ldk-tech",
-    "shopLink": "/ldk-tech-shop"
+    "id": "prop",
+    "name": "Prop",
+    "color": "#4E7882",
+    "productLink": "/prop",
+    "shopLink": "/prop-shop"
   },
   {
-    "id": "icon2",
-    "name": "Jinko",
-    "color": "red",
-    "productLink": "/jinko-tech",
-    "shopLink": "/jinko-tech-shop"
+    "id": "togu",
+    "name": "Togu",
+    "color": "#C3840F",
+    "productLink": "/togu",
+    "shopLink": "/togu-shop"
   },
   {
-    "id": "icon1",
-    "name": "Suntech",
-    "color": "green",
-    "productLink": "/suntech-tech",
-    "shopLink": "/suntech-tech-shop"
+    "id": "tribe",
+    "name": "Tribe",
+    "color": "#6597B1",
+    "productLink": "/tribe",
+    "shopLink": "/tribe-shop"
   },
   {
-    "id": "icon2",
-    "name": "Risen",
-    "color": "blue",
-    "productLink": "/risen-tech",
-    "shopLink": "/risen-tech-shop"
+    "id": "wizard",
+    "name": "Wizard",
+    "color": "#C3B1C8",
+    "productLink": "/wizard",
+    "shopLink": "/wizard-shop"
   }
 ]
