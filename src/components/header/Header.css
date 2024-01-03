@@ -29,6 +29,8 @@
 .nav-links {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  flex: 1;
 }
 
 .nav-links .nav-link {

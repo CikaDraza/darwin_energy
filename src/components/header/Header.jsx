@@ -6,7 +6,7 @@ import { useRef, useState } from 'react';
 import Autocomplete from '../autocomplete/Autocomplete';
 
 const Header = () => {
-  const [showProductsDropdown, setShowProductsDropdown] = useState(true);
+  const [showProductsDropdown, setShowProductsDropdown] = useState(false);
   const dropdownRef = useRef(null);
 
   const handleMouseEnter = () => {
@@ -23,7 +23,7 @@ const Header = () => {
         <div className="top-header">
           <div className="logo">
             <Link to="/">
-              <img src="../../public/icons/Darwin_Logo.png" alt="darwin logo" />
+              <img src="/icons/Darwin_Logo.png" alt="darwin logo" />
             </Link>
           </div>
           <div className='navigation'>
