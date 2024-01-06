@@ -4,10 +4,13 @@ import productData from '../../../src/assets/data/products.json'
 import './Header.css';
 import { useRef, useState } from 'react';
 import Autocomplete from '../autocomplete/Autocomplete';
+import Dropdown from './Dropdown';
 
-const Header = () => {
+export default function Header() {
   const [showProductsDropdown, setShowProductsDropdown] = useState(false);
   const dropdownRef = useRef(null);
+  const [language, setLanguage] = useState('BE');
+  const [currency, setCurrency] = useState('€');
 
   const handleMouseEnter = () => {
     setShowProductsDropdown(true);
@@ -36,17 +39,12 @@ const Header = () => {
               <Autocomplete suggestions={productData}/>
             </div>
             <div className="selectors">
-              <select className="language-selector">
-                <option value="be">BE</option>
-                <option value="fr">FR</option>
-                <option value="nl">NL</option>
-                <option value="us">US</option>
-              </select>
-              <span className="separator">·</span>
-              <select className="currency-selector">
-                <option value="eur">€</option>
-                <option value="usd">$</option>
-              </select>
+            <Dropdown
+              languageOptions={['BE', 'FR', 'NL', 'US']}
+              currencyOptions={['€', '$']}
+              onLanguageSelect={setLanguage}
+              onCurrencySelect={setCurrency}
+            />
             </div>
           </div>
         </div>
@@ -82,6 +80,4 @@ const Header = () => {
       </div>
     </header>
   );
-};
-
-export default Header;
+}

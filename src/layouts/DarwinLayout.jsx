@@ -4,7 +4,8 @@ import Header from "../components/header/Header"
 
 export default function DarwinLayout() {
   return (
-    <div>
+    <div className="darwin-layout">
+      <div className="wrapper"></div>
       <Header />
       <main>
         <Outlet />

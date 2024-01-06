@@ -1,10 +1,17 @@
 import Products from "../components/products/Products"
+import ProductsExample from "../components/products/ProductsExample"
 
 function Home() {
- 
 
   return (
-    <Products />
+    <div>
+      <section>
+        <Products />
+      </section>
+      <section>
+        <ProductsExample />
+      </section>
+    </div>
   )
 }
 

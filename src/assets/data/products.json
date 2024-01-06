@@ -3,6 +3,8 @@
     "id": "brain",
     "name": "Brain",
     "color": "#0EAAC0",
+    "contrastColor": "#F4F4F4",
+    "subText": "Renewable Energy Companies ERP System",
     "productLink": "/brain",
     "shopLink": "/brain-shop"
   },
@@ -10,6 +12,8 @@
     "id": "ando",
     "name": "Ando",
     "color": "#CDD62B",
+    "contrastColor": "#222",
+    "subText": "Creator of High Tech Solar Modules",
     "productLink": "/ando",
     "shopLink": "/ando-shop"
   },
@@ -17,6 +21,8 @@
     "id": "chill",
     "name": "Chill",
     "color": "#6AC0B0",
+    "contrastColor": "#222",
+    "subText": "Renewable Energy Outdoor Furniture",
     "productLink": "/chill",
     "shopLink": "/chill-shop"
   },
@@ -24,6 +30,8 @@
     "id": "eeveecee",
     "name": "Eeveecee",
     "color": "#8EB15B",
+    "contrastColor": "#222",
+    "subText": "high-quality EV Charger Station",
     "productLink": "/eeveecee",
     "shopLink": "/eeveecee-shop"
   },
@@ -31,6 +39,8 @@
     "id": "emon",
     "name": "Emon",
     "color": "#A3CF99",
+    "contrastColor": "#222",
+    "subText": "Intelligent Energy Monitoring",
     "productLink": "/emon",
     "shopLink": "/emon-shop"
   },
@@ -38,6 +48,8 @@
     "id": "feu",
     "name": "Feu",
     "color": "#ED6E46",
+    "contrastColor": "#F4F4F4",
+    "subText": "Functional Infrared Panels and Heaters",
     "productLink": "/feu",
     "shopLink": "/feu-shop"
   },
@@ -45,6 +57,8 @@
     "id": "fluxx",
     "name": "Fluxx",
     "color": "#FFCC07",
+    "contrastColor": "#222",
+    "subText": "Advanced Batery Technology",
     "productLink": "/fluxx",
     "shopLink": "/fluxx-shop"
   },
@@ -52,6 +66,8 @@
     "id": "gloww",
     "name": "Gloww",
     "color": "#FFDD06",
+    "contrastColor": "#222",
+    "subText": "Conteprorary Solar Street Lights",
     "productLink": "/gloww",
     "shopLink": "/gloww-shop"
   },
@@ -59,6 +75,8 @@
     "id": "muki",
     "name": "Muki",
     "color": "#7BB388",
+    "contrastColor": "#222",
+    "subText": "Dynamic Energy Kits",
     "productLink": "/muki",
     "shopLink": "/muki-shop"
   },
@@ -66,6 +84,8 @@
     "id": "nendo",
     "name": "Nendo",
     "color": "#028998",
+    "contrastColor": "#F4F4F4",
+    "subText": "Advanced Heat Pump Technology",
     "productLink": "/nendo",
     "shopLink": "/nendo-shop"
   },
@@ -73,6 +93,8 @@
     "id": "ogo",
     "name": "Ogo",
     "color": "#009FE3",
+    "contrastColor": "#F4F4F4",
+    "subText": "Cutting-edge Heat Pump Boilers",
     "productLink": "/ogo",
     "shopLink": "/ogo-shop"
   },
@@ -80,6 +102,8 @@
     "id": "ozz",
     "name": "Ozz",
     "color": "#5EC5EB",
+    "contrastColor": "#222",
+    "subText": "Clever Energy Managers",
     "productLink": "/ozz",
     "shopLink": "/ozz-shop"
   },
@@ -87,6 +111,8 @@
     "id": "prop",
     "name": "Prop",
     "color": "#4E7882",
+    "contrastColor": "#F4F4F4",
+    "subText": "Small Scale Wind Turbine System",
     "productLink": "/prop",
     "shopLink": "/prop-shop"
   },
@@ -94,6 +120,8 @@
     "id": "togu",
     "name": "Togu",
     "color": "#C3840F",
+    "contrastColor": "#F4F4F4",
+    "subText": "Solar Cable, Connectors and Components",
     "productLink": "/togu",
     "shopLink": "/togu-shop"
   },
@@ -101,6 +129,8 @@
     "id": "tribe",
     "name": "Tribe",
     "color": "#6597B1",
+    "contrastColor": "#222",
+    "subText": "Shared Energy / Smart Grid - Community",
     "productLink": "/tribe",
     "shopLink": "/tribe-shop"
   },
@@ -108,6 +138,8 @@
     "id": "wizard",
     "name": "Wizard",
     "color": "#C3B1C8",
+    "contrastColor": "#222",
+    "subText": "Calculator for Renewable Energy Projects",
     "productLink": "/wizard",
     "shopLink": "/wizard-shop"
   }
