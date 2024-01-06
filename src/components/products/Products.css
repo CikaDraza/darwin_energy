@@ -54,6 +54,7 @@ section {
 .right-column .caption {
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 
 .caption img {
@@ -67,6 +68,10 @@ section {
   opacity: .1;
 }
 
+.caption .sub-text {
+  text-align: left;
+}
+
 .caption .hr {
   margin: .5rem 0;
   width: 100%;
@@ -76,6 +81,7 @@ section {
 .caption .links {
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 
 .caption .links a {
@@ -229,7 +235,7 @@ section {
 }
 
 .heading-container .column {
-  width: 50%;
+  width: 100%;
   padding-top: 1rem;
 }
 
@@ -237,6 +243,7 @@ section {
   color: #444;
   font-size: 30pt;
   font-weight: bolder;
+  text-align: center;
 }
 
 .heading-text {
@@ -246,6 +253,7 @@ section {
   color: #555;
   font-size: 8pt;
   padding-bottom: 1rem;
+  text-align: center;
 }
 
 .section-products-example .icons-container {
@@ -283,7 +291,7 @@ section {
   justify-content: space-between;
 }
 
-.links a {
+.section-products-example .links a {
   text-decoration: none;
   color: #222;
   background-color: #fff;
@@ -305,25 +313,29 @@ section {
   }
 
   .icons {
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
     padding: 1rem 0;
+  }
+
+  .left-column, .shrink {
+    order: 2;
   }
 
   .column.right-column {
     flex: 0 0 100%!important;
+    order: 1;
   }
 
   .shrink {
     flex: 0 0 100%!important;
   }
 
-  .links a {
-    background-color: transparent!important;
-  }
-
   .section-products-example {
     padding: 2rem 1rem;
+  }
+
+  .section-products-example .links {
+    display: flex;
+    flex-wrap: wrap;
   }
 
 }

@@ -5,18 +5,19 @@ import '../../App.css'
 import './Products.css'
 import iconsMap from '../../assets/iconMap';
 import { NavLink } from 'react-router-dom';
+import useMediaQuery from '../useMediaQuery/useMediaQuery';
 
 export default function Products() {
   const [selectedIcon, setSelectedIcon] = useState(null);
   const [animationPhase, setAnimationPhase] = useState('initial');
-  const containerRef = useRef(null);
+  const match = useMediaQuery('(max-width: 680px)');
   const selectedRef = useRef(null);
   const iconsContainerRef = useRef(null);
   const iconRefs = useRef({});
 
   useEffect(() => {
-    if (selectedIcon && containerRef.current && selectedRef.current) {
-      const containerRect = containerRef.current.getBoundingClientRect();
+    if (selectedIcon && iconsContainerRef.current && selectedRef.current) {
+      const containerRect = iconsContainerRef.current.getBoundingClientRect();
       const selectedRect = selectedRef.current.getBoundingClientRect();
       const centerX = -(selectedRect.left - containerRect.left - selectedRect.width / 2);
       const centerY = -(selectedRect.top - containerRect.top - selectedRect.height / 2);
@@ -157,14 +158,20 @@ export default function Products() {
             (
               <div className='caption'>
                 <h2 className="vertical-text">
-                  <span>P</span>
-                  <span>r</span>
-                  <span>o</span>
-                  <span>d</span>
-                  <span>u</span>
-                  <span>c</span>
-                  <span>t</span>
-                  <span>s</span>
+                {
+                  match ? <span>Products</span>
+                  :
+                  <div>
+                    <span>P</span>
+                    <span>r</span>
+                    <span>o</span>
+                    <span>d</span>
+                    <span>u</span>
+                    <span>c</span>
+                    <span>t</span>
+                    <span>s</span>
+                  </div>
+                }
                 </h2>
                 <img src="/icons/vertical-lines.svg" />
               </div>
