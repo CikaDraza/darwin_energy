@@ -303,6 +303,49 @@ section {
   margin-right: .25rem;
 }
 
+.caption-emaple2 .row {
+  min-height: 100%;
+}
+
+.caption-emaple2 {
+  padding: 0 1rem;
+  height: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.caption-emaple2 h2 {
+  font-size: 12pt;
+  margin: 0;
+  margin-bottom: 1rem;
+  width: 100%;
+  text-align: left;
+}
+
+.caption-emaple2 hr {
+  position: absolute;
+  top: .75rem;
+  left: 1rem;
+  width: 20px;
+
+}
+
+.caption.caption-emaple2 .caption-emaple2__text {
+  font-size: 8pt;
+  padding-bottom: 1rem;
+  text-align: justify;
+}
+
+.caption-emaple2 img {
+  margin: 0 auto;
+}
+
+.caption-emaple3 {
+  text-align: left;
+}
+
 @media (max-width: 680px) {
   .row {
     flex-wrap: wrap;
