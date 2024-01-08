@@ -1,4 +1,4 @@
-import SectionFourColumn from "../components/SectionFourColumn"
+import SectionFourColumn from "../components/SectionFourColumn/SectionFourColumn"
 import Products from "../components/products/Products"
 import ProductsExample from "../components/products/ProductsExample"
 import ProductsExample2 from "../components/products/ProductsExample2"
@@ -16,7 +16,7 @@ function Home() {
       <section>
         <ProductsExample2 />
       </section>
-      <section style={{minHeight: '100vh'}}>
+      <section>
         <SectionFourColumn />
       </section>
     </div>

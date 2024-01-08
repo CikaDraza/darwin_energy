@@ -1,9 +1,10 @@
 import React, { createRef, useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import useMediaQuery from './useMediaQuery/useMediaQuery';
-import productData from '../assets/data/products.json';
-import iconsMap from '../assets/iconMap';
+import useMediaQuery from '../useMediaQuery/useMediaQuery';
+import productData from '../../assets/data/products.json';
+import iconsMap from '../../assets/iconMap';
 import { NavLink } from 'react-router-dom';
+import './SectionFourColumn.css'
 
 
 export default function SectionFourColumn() {
@@ -124,7 +125,7 @@ export default function SectionFourColumn() {
 
     return (
       <div style={{display: 'flex'}}>
-        <div style={{ flex: `0 0 ${leftWidth}`, padding: name === 'products' ? 0 : 20, backgroundColor: name === 'products' ? 'transparent' : '#f0f0f0' }}>
+        <motion.div style={{ flex: `0 0 ${leftWidth}`, padding: name === 'products' ? 0 : 20 }} animate={{ flex: selectedIcon ? '0 0 50%' : '0 0 66.6%' }}>
           {
             position === 'right' && name === 'systems' || name === 'products' ?
             name === 'products' ?
@@ -176,32 +177,29 @@ export default function SectionFourColumn() {
             :
             <div>
               <p>{column}</p>
-              <button onClick={() => setExpandedColumn(null)}>Reset</button>
+              <button onClick={() => setExpandedColumn(null)}>
+                <img src="/icons/vertical-lines.svg" />
+              </button>
             </div>
           }
-        </div>
-        <div style={{ flex: `0 0 ${rightWidth}`, padding: name === 'products' ? 0 : 20, backgroundColor:  name === 'products' ? 'transparent' : '#ddd' }}>
+        </motion.div>
+        <motion.div className='columns' style={{ flex: `0 0 ${rightWidth}`, padding: name === 'products' ? 0 : 20, '--border-left__color': expandedColumn ? 'transparent' : '#DBDBDB' }} animate={{ flex: selectedIcon ? '0 0 50%' : '0 0 33.3%' }}>
           {
             position === 'left' && name === 'people' || name === 'finances' ?
             <p>Content for {column}</p>
             :
             name === 'products' ?
             <motion.div
+              id='small-column'
               onAnimationComplete={() => {
                 if (animationPhase === 'iconAnimating') {
                   setAnimationPhase('columnResizing');
                 }
               }}
               className={`column ${animationPhase === 'columnResizing' ? 'right-column expanded' : 'right-column'}`}
-              style={{ backgroundColor: selectedIcon ? selectedIcon.color : 'initial' }}
-              animate={{ flex: selectedIcon ? '0 0 50%' : '0 0 33.3%' }}
+              style={{ backgroundColor: selectedIcon ? selectedIcon.color : 'initial', '--border-left__color': selectedIcon ? 'transparent' : '#DBDBDB' }}
+              animate={{ flex: '0 0 100%' }}
             >
-              <div
-              style={{ 
-                backgroundColor: selectedIcon?.color,
-                opacity: .5
-              }}
-              className='background'></div>
               {
                 selectedIcon ?
                 (
@@ -232,7 +230,7 @@ export default function SectionFourColumn() {
                         <p className='caption-emaple2__text'>We're not just manufacturing products; we're engineering a sustainable future. Explore our range and join us in this green energy revolution.</p>
                       </div>
                     </div>
-                    <button style={{border: 'none', cursor: 'pointer'}} onClick={() => setExpandedColumn(null)}>
+                    <button className='reset' style={{border: 'none', cursor: 'pointer'}} onClick={() => setExpandedColumn(null)}>
                       <img src="/icons/vertical-lines.svg" />
                     </button>
                   </div>
@@ -242,30 +240,35 @@ export default function SectionFourColumn() {
             :
             <div>
               <p>{column}</p>
-              <button onClick={() => setExpandedColumn(null)}>Reset</button>
+                <button onClick={() => setExpandedColumn(null)}>
+                  <img src="/icons/vertical-lines.svg" />
+                </button>
             </div>
           }
-        </div>
+        </motion.div>
       </div>
     );
   };
 
   return (
-    <div style={{ display: 'flex', height: '100%' }}>
+    <div className='section-four-column' style={{ display: 'flex', height: '100%' }}>
       {['People', 'Products', 'Finances', 'Systems'].map((column) => (
         <motion.div
           key={column}
           variants={columnVariants}
           initial="initial"
           animate={expandedColumn === column ? 'expanded' : expandedColumn ? 'collapsed' : 'initial'}
-          style={{ overflow: 'hidden' }}
+          style={{ overflow: 'hidden', '--border-left__color': expandedColumn ? 'transparent' : '#DBDBDB' }}
+          className= {expandedColumn ? '' : 'columns'}
         >
           {expandedColumn === column ? (
             renderAdditionalContent(column)
           ) : (
             <>
               <h2>{column}</h2>
-              <button onClick={() => setExpandedColumn(column)}>Expand</button>
+              <button onClick={() => setExpandedColumn(column)}>
+                <img src="/icons/vertical-lines.svg" />
+              </button>
             </>
           )}
         </motion.div>

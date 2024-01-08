@@ -128,15 +128,9 @@ export default function Products() {
             }
           }}
           className={`column ${animationPhase === 'columnResizing' ? 'right-column expanded' : 'right-column'}`}
-          style={{ backgroundColor: selectedIcon ? selectedIcon.color : 'initial' }}
+          style={{ backgroundColor: selectedIcon ? selectedIcon.color : 'initial', '--border__color': selectedIcon ? 'transparent' : '#DBDBDB' }}
           animate={{ flex: selectedIcon ? '0 0 50%' : '0 0 33.3%' }}
         >
-          <div
-           style={{ 
-            backgroundColor: selectedIcon?.color,
-            opacity: .5
-           }}
-           className='background'></div>
           {
             selectedIcon ?
             (

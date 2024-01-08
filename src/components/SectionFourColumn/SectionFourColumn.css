@@ -1,0 +1,75 @@
+section {
+  min-height: 100%;
+}
+
+.section-four-column {
+  position: relative;
+}
+
+.columns {
+  height: 100%;
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.columns::after {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 36rem;
+  left: 0;
+  background-color: var(--border-left__color);
+}
+
+.right-column::before {
+  position: absolute;
+  content: '';
+  width: 2px;
+  height: 36rem;
+  left: 0;
+  background-color: var(--border-left__color);
+}
+
+.columns h2 {
+  display: block;
+  justify-content: center;
+  width: 100%;
+}
+
+.columns button {
+  width: 100px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transform: rotateZ(90deg);
+}
+
+.right-column {
+  flex: 0 0 100%;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.column.right-column.expanded {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+.column.left-column, .shrink {
+  height: 100%;
+}
+
+.column p {
+  padding: 1rem;
+  color: #444;
+}
+
+.hr {
+  margin: 0;
+}

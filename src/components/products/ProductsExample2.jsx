@@ -128,15 +128,9 @@ export default function ProductsExample2() {
             }
           }}
           className={`column ${animationPhase === 'columnResizing' ? 'right-column expanded' : 'right-column'}`}
-          style={{ backgroundColor: selectedIcon ? selectedIcon.color : 'initial' }}
+          style={{ backgroundColor: selectedIcon ? selectedIcon.color : 'initial', '--border-left__color': selectedIcon ? 'transparent' : '#DBDBDB' }}
           animate={{ flex: selectedIcon ? '0 0 50%' : '0 0 33.3%' }}
         >
-          <div
-           style={{ 
-            backgroundColor: selectedIcon?.color,
-            opacity: .5
-           }}
-           className='background'></div>
           {
             selectedIcon ?
             (
@@ -157,15 +151,13 @@ export default function ProductsExample2() {
             :
             (
               <div className='caption caption-emaple2'>
-                <h2 className="normal-text">Products</h2>
-                <hr />
-                <div className='row'>
-                  <div className='column'>
-                    <p className='caption-emaple2__text'>At <strong>DARWIN ENERGY INOVATOR</strong>, we are dedicated to pioneering the future of renewable energy. Our diverse array of products caters to both individual and commercial needs
-                    </p>
-                    <p className='caption-emaple2__text'>Ensuring that sustainable energy solutions are accessible to all. From cutting-edge solar modules to intelligent energy monitoring systems, our portfolio is designed to meet the evolving demands of the renewable energy sector.</p>
-                    <p className='caption-emaple2__text'>We're not just manufacturing products; we're engineering a sustainable future. Explore our range and join us in this green energy revolution.</p>
-                  </div>
+                <div className='caption-example2__wrapper'>
+                  <h2 className="normal-text">Products</h2>
+                  <hr />
+                  <p className='caption-emaple2__text'>At <strong>DARWIN ENERGY INOVATOR</strong>, we are dedicated to pioneering the future of renewable energy. Our diverse array of products caters to both individual and commercial needs
+                  </p>
+                  <p className='caption-emaple2__text'>Ensuring that sustainable energy solutions are accessible to all. From cutting-edge solar modules to intelligent energy monitoring systems, our portfolio is designed to meet the evolving demands of the renewable energy sector.</p>
+                  <p className='caption-emaple2__text'>We're not just manufacturing products; we're engineering a sustainable future. Explore our range and join us in this green energy revolution.</p>
                 </div>
                 <img src="/icons/vertical-lines.svg" />
               </div>

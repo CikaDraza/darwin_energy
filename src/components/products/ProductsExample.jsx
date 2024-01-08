@@ -44,14 +44,13 @@ export default function ProductsExample() {
               {
                 productData.map((iconData) => {
                   const IconComponent = iconsMap[iconData.id];
-                  console.log(selectedIcon === iconData.id ? iconData.color : undefined);
                   return (
                     <div
-                    ref={iconRefs}
-                    onMouseEnter={() => handleMouseEnter(iconData)}
-                    onMouseLeave={handleMouseLeave}
-                    key={iconData.id}
-                    className='icon'
+                      ref={iconRefs}
+                      onMouseEnter={() => handleMouseEnter(iconData)}
+                      onMouseLeave={handleMouseLeave}
+                      key={iconData.id}
+                      className='icon'
                     >
                       <IconComponent fill={selectedIcon === iconData.id ? iconData.color : undefined} />
                       <h3 className='text'>{iconData.name}</h3>

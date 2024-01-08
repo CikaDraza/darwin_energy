@@ -17,14 +17,12 @@ section {
 
 .left-column {
   flex: 0 0 66.6%;
-  background: linear-gradient(53deg, #FFF 0%, #EAEAEA 82.01%);
   position: relative;
   z-index: 1;
 }
 
 .shrink {
   flex: 0 0 50%;
-  background: linear-gradient(53deg, #FFF 0%, #EAEAEA 82.01%);
   position: relative;
   z-index: 1;
   transition: all 0.3s ease-in-out;
@@ -38,17 +36,13 @@ section {
   align-items: center;
 }
 
-.right-column .background {
-  height: 100%;
-  width: 100%;
-  background-image: url('../public/images/darwin_tree.png');
-  background-repeat: no-repeat;
-  background-size: 100% 120%;
-  scale: 1;
+.right-column::before {
   position: absolute;
-  top: 0;
+  content: '';
+  width: 2px;
+  height: 36rem;
   left: 0;
-  z-index: 0;
+  background-color: var(--border-left__color);
 }
 
 .right-column .caption {
@@ -308,16 +302,21 @@ section {
 }
 
 .caption-emaple2 {
-  padding: 0 1rem;
-  height: 50%;
+  padding: 0 3rem;
+  height: 100%;
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
+.caption-example2__wrapper {
+  position: relative;
+}
+
 .caption-emaple2 h2 {
-  font-size: 12pt;
+  font-size: 64pt;
   margin: 0;
   margin-bottom: 1rem;
   width: 100%;
@@ -326,9 +325,9 @@ section {
 
 .caption-emaple2 hr {
   position: absolute;
-  top: .75rem;
-  left: 1rem;
-  width: 20px;
+  top: 5rem;
+  left: 0;
+  width: 6rem;
 
 }
 
@@ -336,6 +335,7 @@ section {
   font-size: 8pt;
   padding-bottom: 1rem;
   text-align: justify;
+  color: #444;
 }
 
 .caption-emaple2 img {
