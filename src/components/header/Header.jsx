@@ -32,7 +32,7 @@ export default function Header() {
           <div className='navigation'>
             <nav className="nav-links">
               <NavLink to="#support" className="nav-link">Support</NavLink>
-              <NavLink to="#shopping" className="nav-link">Shopping</NavLink>
+              <NavLink to="/shop" className="nav-link">Shopping</NavLink>
               <NavLink to="#account" className="nav-link">My Account</NavLink>
             </nav>
             <div className="search-bar">

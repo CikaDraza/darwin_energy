@@ -4,11 +4,11 @@ body {
   min-height: 100%;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-  position: absolute;
-  background: linear-gradient(12deg, #FFF 14.84%, #EAEAEA 92.54%);
+  background: linear-gradient(12deg, #FFF 14.84%, #5e5e5e 100%);
   background-image: url('/icons/darwin_tree.svg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 p {

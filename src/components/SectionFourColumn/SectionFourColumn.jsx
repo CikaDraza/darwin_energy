@@ -36,10 +36,10 @@ export default function SectionFourColumn() {
         columnElement.removeEventListener('transitionend', handleTransitionEnd);
       };
   
-      columnElement.addEventListener('transitionend', handleTransitionEnd);
+      columnElement?.addEventListener('transitionend', handleTransitionEnd);
   
       return () => {
-        columnElement.removeEventListener('transitionend', handleTransitionEnd);
+        columnElement?.removeEventListener('transitionend', handleTransitionEnd);
       };
     }
   }, [animationPhase]);
@@ -123,87 +123,98 @@ export default function SectionFourColumn() {
         leftWidth = rightWidth = '50%'; // default case
     }
 
-    return (
-      <div style={{display: 'flex'}}>
-        <motion.div style={{ flex: `0 0 ${leftWidth}`, padding: name === 'products' ? 0 : 20 }} animate={{ flex: selectedIcon ? '0 0 50%' : '0 0 66.6%' }}>
+  return (
+    <div className='section-products'>
+      <div className='row'>
+        <motion.div className='columns' style={{ flex: `0 0 ${leftWidth}`, padding: name === 'products' ? 0 : 20 }} animate={{ flex: selectedIcon ? '0 0 50%' : `0 0 ${leftWidth}` }}>
           {
             position === 'right' && name === 'systems' || name === 'products' ?
             name === 'products' ?
-            <motion.div
-              className={`${selectedIcon ? 'shrink' : 'column left-column'}`}>
-              <div className='icons-container' ref={iconsContainerRef}>
-                {selectedIcon && <img className='reset-btn' onClick={handleReset} src="/icons/vertical-lines.svg" />}
-                <div className={`${selectedIcon ? 'no-grid' : 'icons show-all'}`}>
-                  {
-                    productData.map((iconData) => {
-                    const IconComponent = iconsMap[iconData.id];
-                    const isSelected = selectedIcon && iconData.name === selectedIcon.name;
-                    if (!iconRefs.current[iconData.name]) {
-                      iconRefs.current[iconData.name] = createRef();
-                    }
-    
-                      return (
-                        <motion.div
-                          onAnimationComplete={() => {
-                            if (animationPhase === 'iconAnimating') {
-                              setAnimationPhase('columnResizing');
-                            }
-                          }}
-                          ref={iconRefs.current[iconData.name]}
-                          key={iconData.name}
-                          className={`icon ${isSelected ? 'selected' : ''}`}
-                          onClick={() => handleIconClick(iconData)}
-                          variants={iconVariants}
-                          initial={{ scale: 1 }}
-                          whileHover={{ scale: 1.2 }}
-                          animate={selectedIcon ? (isSelected ? {
-                            x: selectedIcon.centerX,
-                            y: selectedIcon.centerY,
-                            scale: 1.5,
-                            transition: { duration: 0.3 }
-                          } : "hidden") : "visible"}
-                          style={{ '--hover-color': iconData.color, '--selected-color': isSelected ? iconData.color : 'initial' }}
-                        >
-                          <IconComponent />
-                        </motion.div>
-                      );
-                    })
+            <div className='icons-container' ref={iconsContainerRef}>
+              {selectedIcon && <img className='reset-btn' onClick={handleReset} src="/icons/vertical-lines.svg" />}
+              <div className={`${selectedIcon ? 'no-grid' : 'icons show-all'}`}>
+                {
+                  productData.map((iconData) => {
+                  const IconComponent = iconsMap[iconData.id];
+                  const isSelected = selectedIcon && iconData.name === selectedIcon.name;
+                  if (!iconRefs.current[iconData.name]) {
+                    iconRefs.current[iconData.name] = createRef();
                   }
-                </div>
+
+                    return (
+                      <motion.div
+                        onAnimationComplete={() => {
+                          if (animationPhase === 'iconAnimating') {
+                            setAnimationPhase('columnResizing');
+                          }
+                        }}
+                        ref={iconRefs.current[iconData.name]}
+                        key={iconData.name}
+                        className={`icon ${isSelected ? 'selected' : ''}`}
+                        onClick={() => handleIconClick(iconData)}
+                        variants={iconVariants}
+                        initial={{ scale: 1 }}
+                        whileHover={{ scale: 1.2 }}
+                        animate={selectedIcon ? (isSelected ? {
+                          x: selectedIcon.centerX,
+                          y: selectedIcon.centerY,
+                          scale: 1.5,
+                          transition: { duration: 0.3 }
+                        } : "hidden") : "visible"}
+                        style={{ '--hover-color': iconData.color, '--selected-color': isSelected ? iconData.color : 'initial' }}
+                      >
+                        <IconComponent />
+                      </motion.div>
+                    );
+                  })
+                }
               </div>
-            </motion.div>
+            </div>
             :
             <p>Content for {column}</p>
             :
-            <div>
-              <p>{column}</p>
-              <button onClick={() => setExpandedColumn(null)}>
+            <div className='caption'>
+              <h2 className="vertical-text">
+              {
+                match ? <span>{column}</span>
+                :
+                <div>
+                  <span>{column.slice(0, 1)}</span>
+                  <span>{column.slice(1, 2)}</span>
+                  <span>{column.slice(2, 3)}</span>
+                  <span>{column.slice(3, 4)}</span>
+                  <span>{column.slice(4, 5)}</span>
+                  <span>{column.slice(5, 6)}</span>
+                  <span>{column.slice(6, 7)}</span>
+                  <span>{column.slice(7, 8)}</span>
+                </div>
+              }
+              </h2>
+              <button className='reset-column' onClick={() => setExpandedColumn(null)}>
                 <img src="/icons/vertical-lines.svg" />
               </button>
             </div>
           }
         </motion.div>
-        <motion.div className='columns' style={{ flex: `0 0 ${rightWidth}`, padding: name === 'products' ? 0 : 20, '--border-left__color': expandedColumn ? 'transparent' : '#DBDBDB' }} animate={{ flex: selectedIcon ? '0 0 50%' : '0 0 33.3%' }}>
+        <motion.div className='columns' style={{ flex: `0 0 ${rightWidth}`, padding: name === 'products' ? 0 : 20, '--border-left__color': selectedIcon ? 'transparent' : '#DBDBDB' }} animate={{ flex: selectedIcon ? '0 0 50%' : `0 0 ${rightWidth}` }}>
           {
             position === 'left' && name === 'people' || name === 'finances' ?
             <p>Content for {column}</p>
             :
             name === 'products' ?
             <motion.div
-              id='small-column'
               onAnimationComplete={() => {
                 if (animationPhase === 'iconAnimating') {
                   setAnimationPhase('columnResizing');
                 }
               }}
-              className={`column ${animationPhase === 'columnResizing' ? 'right-column expanded' : 'right-column'}`}
-              style={{ backgroundColor: selectedIcon ? selectedIcon.color : 'initial', '--border-left__color': selectedIcon ? 'transparent' : '#DBDBDB' }}
-              animate={{ flex: '0 0 100%' }}
+              className={`column ${animationPhase === 'columnResizing' ? 'small-column expanded' : 'small-column'}`}
+              style={{ backgroundColor: selectedIcon ? selectedIcon.color : 'initial', '--border__color': selectedIcon ? 'transparent' : '#DBDBDB' }}
             >
               {
                 selectedIcon ?
                 (
-                  <div className='caption'>
+                  <div className={selectedIcon ? 'caption selected' : 'caption'}>
                     <h2 className='text'>{selectedIcon.name}</h2>
                     <p style={{ color: selectedIcon.contrastColor }} className='sub-text'>{selectedIcon.subText}</p>
                     <div className="hr" style={{ border: `thin solid ${selectedIcon.contrastColor}` }} />
@@ -219,18 +230,24 @@ export default function SectionFourColumn() {
                 )
                 :
                 (
-                  <div className='caption caption-emaple3'>
-                    <h2 style={{textAlign: 'left'}} className="normal-text">Products</h2>
-                    <hr />
-                    <div className='row'>
-                      <div className='column'>
-                        <p className='caption-emaple2__text'>At <strong>DARWIN ENERGY INOVATOR</strong>, we are dedicated to pioneering the future of renewable energy. Our diverse array of products caters to both individual and commercial needs
-                        </p>
-                        <p className='caption-emaple2__text'>Ensuring that sustainable energy solutions are accessible to all. From cutting-edge solar modules to intelligent energy monitoring systems, our portfolio is designed to meet the evolving demands of the renewable energy sector.</p>
-                        <p className='caption-emaple2__text'>We're not just manufacturing products; we're engineering a sustainable future. Explore our range and join us in this green energy revolution.</p>
+                  <div className='caption'>
+                    <h2 className="vertical-text">
+                    {
+                      match ? <span>{column}</span>
+                      :
+                      <div>
+                        <span>{column.slice(0, 1)}</span>
+                        <span>{column.slice(1, 2)}</span>
+                        <span>{column.slice(2, 3)}</span>
+                        <span>{column.slice(3, 4)}</span>
+                        <span>{column.slice(4, 5)}</span>
+                        <span>{column.slice(5, 6)}</span>
+                        <span>{column.slice(6, 7)}</span>
+                        <span>{column.slice(7, 8)}</span>
                       </div>
-                    </div>
-                    <button className='reset' style={{border: 'none', cursor: 'pointer'}} onClick={() => setExpandedColumn(null)}>
+                    }
+                    </h2>
+                    <button className='reset-column' onClick={() => setExpandedColumn(null)}>
                       <img src="/icons/vertical-lines.svg" />
                     </button>
                   </div>
@@ -239,14 +256,32 @@ export default function SectionFourColumn() {
             </motion.div>
             :
             <div>
-              <p>{column}</p>
-                <button onClick={() => setExpandedColumn(null)}>
-                  <img src="/icons/vertical-lines.svg" />
-                </button>
+                <div className='caption'>
+                  <h2 className="vertical-text">
+                  {
+                    match ? <span>{column}</span>
+                    :
+                    <div>
+                      <span>{column.slice(0, 1)}</span>
+                      <span>{column.slice(1, 2)}</span>
+                      <span>{column.slice(2, 3)}</span>
+                      <span>{column.slice(3, 4)}</span>
+                      <span>{column.slice(4, 5)}</span>
+                      <span>{column.slice(5, 6)}</span>
+                      <span>{column.slice(6, 7)}</span>
+                      <span>{column.slice(7, 8)}</span>
+                    </div>
+                  }
+                  </h2>
+                  <button className='reset-column' onClick={() => setExpandedColumn(null)}>
+                    <img src="/icons/vertical-lines.svg" />
+                  </button>
+                </div>
             </div>
           }
         </motion.div>
       </div>
+    </div>
     );
   };
 
@@ -265,10 +300,27 @@ export default function SectionFourColumn() {
             renderAdditionalContent(column)
           ) : (
             <>
-              <h2>{column}</h2>
-              <button onClick={() => setExpandedColumn(column)}>
-                <img src="/icons/vertical-lines.svg" />
-              </button>
+              <div className='caption'>
+                <h2 className="vertical-text">
+                {
+                  match ? <span>{column}</span>
+                  :
+                  <div>
+                    <span>{column.slice(0, 1)}</span>
+                    <span>{column.slice(1, 2)}</span>
+                    <span>{column.slice(2, 3)}</span>
+                    <span>{column.slice(3, 4)}</span>
+                    <span>{column.slice(4, 5)}</span>
+                    <span>{column.slice(5, 6)}</span>
+                    <span>{column.slice(6, 7)}</span>
+                    <span>{column.slice(7, 8)}</span>
+                  </div>
+                }
+                </h2>
+                <button style={{transform: 'rotateZ(90deg)'}} className='reset-column' onClick={() => setExpandedColumn(column)}>
+                  <img src="/icons/vertical-lines.svg" />
+                </button>
+              </div>
             </>
           )}
         </motion.div>
