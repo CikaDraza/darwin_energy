@@ -1,9 +1,13 @@
+import ShopLayout from "../components/shop_layout/ShopLayout"
+
 function Shop() {
 
   return (
     <div>
       <section>
-        <p>My Shop</p>
+        <div className="container">
+         <ShopLayout />
+        </div>
       </section>
     </div>
   )
