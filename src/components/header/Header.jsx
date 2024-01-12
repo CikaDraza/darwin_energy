@@ -22,7 +22,7 @@ export default function Header() {
 
   return (
     <header className='header'>
-      <div className='container'>
+      <div className='custom-container'>
         <div className="top-header">
           <div className="logo">
             <Link to="/">

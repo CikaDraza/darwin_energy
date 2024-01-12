@@ -1,0 +1,31 @@
+.row_shop {
+  display: flex;
+  flex-wrap: wrap;
+
+  header {
+    width: 100%;
+    border-bottom: thin solid #DBDBDB;
+    margin-bottom: 4rem;
+    .row {
+      overflow: visible;
+      .title {
+        display: flex;
+        flex: 1;
+        h2 {
+          width: 100%;
+        }
+      }
+      .column.sort, .column.view {
+        flex: 0;
+      }
+    }
+  }
+}
+
+.column_shop {
+  flex: 1;
+}
+
+aside.column_shop {
+  flex: 0 0 25%;
+}

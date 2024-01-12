@@ -1,35 +1,24 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import productData from '../../../src/assets/data/products.json'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 
-export default function Card() {
-  const [selected, setSelected] = React.useState('');
-  const matches = useMediaQuery('(min-width: 480px)');
-
-  const handleLoading = (product) => {
-    setSelected(product._id);
-  };
-
+function ProductCard() {
   return (
-    <div sx={{ width: "100%", '& a': {textDecoration: 'none'} }}>
-      {
-        product._id === selected &&
-        <img className='circular-progress' sx={{position: 'absolute', left: '45%', top: '20%', zIndex: 1, transform: 'translateX(-50%)'}} size={50} />
-      }
-        <div className='card-action-area'>
-          {
-            productData?.map(item => (
-              <NavLink onClick={() => handleLoading(item)}>
-                <div className='card-media' sx={{ justifyContent: {xs: 'center', sm: 'flex-end'}, alignItems: 'center','& img': {width: `${imgWidth}!important`, height: `${imgHeight}`, marginTop: `${marginTop}`}, overflow: 'hidden'  }} component="div">
-                  <img src={item}  alt={item.name} />
-                </div>
-              </NavLink>
-            ))
-          }
-        </div>
-        <div className='card-actions'>
-          <button size="small">Add to cart</button>
-        </div>
-    </div>
-  )
+    <Card className='my-2' style={{ width: '100%' }}>
+      <Card.Img variant="top" src="/images/solar_panel_image.png" />
+      <Card.Body>
+        <Card.Title className='mb-3'>Solar Panel Model Name 235</Card.Title>
+        <Card.Subtitle className="mb-2 text-muted">Article Code: 2024587</Card.Subtitle>
+        <Card.Subtitle className="mb-2 text-muted fs-2">325 - 350 EUR</Card.Subtitle>
+        <ListGroup className='mb-2' variant="flush">
+          <ListGroup.Item className='d-flex justify-content-between'><span>Now Available</span><span>152 pcs</span></ListGroup.Item>
+          <ListGroup.Item className='d-flex justify-content-between'><span>As of 20.feb </span><span>152 pcs</span></ListGroup.Item>
+          <ListGroup.Item className='d-flex justify-content-between'><span>As of 15.mar</span><span>252 pcs</span></ListGroup.Item>
+        </ListGroup>
+        <Button className='w-100' variant="primary">Add to cart</Button>
+      </Card.Body>
+    </Card>
+  );
 }
+
+export default ProductCard;

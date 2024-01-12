@@ -3,12 +3,12 @@ import ShopLayout from "../components/shop_layout/ShopLayout"
 function Shop() {
 
   return (
-    <div>
-      <section>
-        <div className="container">
-         <ShopLayout />
-        </div>
-      </section>
+    <div className="shop-wrapper">
+      <div className="custom-container">
+        <section>
+          <ShopLayout />
+        </section>
+      </div>
     </div>
   )
 }

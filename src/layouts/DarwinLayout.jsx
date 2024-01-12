@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom"
-import './DarwinLayouts.css'
+import './DarwinLayouts.scss'
 import Header from "../components/header/Header"
 
 export default function DarwinLayout() {

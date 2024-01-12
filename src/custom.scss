@@ -1,0 +1,83 @@
+$primary: #028998;
+$secondary: #222;
+$tertiary: #DBDBDB;
+$tetra: #444;
+$light: #666;
+$success: #00E599;
+$info: #0f92ff;
+$warning: #F9A602;
+$danger: #ff0000;
+$dark: #000;
+$white: #f9f9f9;
+$clean-white: #ffffff;
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
+
+$accordion-button-active-bg: $tertiary;
+$accordion-color: $white;
+$accordion-button-active-color: $light;
+$accordion-button-active-bg: $dark;
+$accordion-button-color: $tertiary;
+$accordion-bg: $dark;
+$accordion-button-focus-box-shadow: trasparent;
+
+// Form select and input
+.form-select:focus {
+  border-color: $primary!important;
+  outline: 0;
+  box-shadow: 0 0 10rem 0.25rem transparent!important;
+}
+.form-control:focus {
+  color: $light;
+  background-color: $secondary;
+  border-color: $secondary;
+  outline: 0;
+  box-shadow: 0 0 10rem 0.25rem $white!important;
+}
+//Link
+$nav-link: $primary;
+$nav-link-hover-color: $secondary;
+
+$list-group-color: $light;
+$list-group-action-hover-color: $clean-white;
+
+//Nav link
+$navbar-light-color: $light;
+$navbar-light-hover-color: $secondary;
+$navbar-light-active-color: $tetra;
+//Card
+$card-border-width: 0;
+$card-border-color: transparent;
+//dropdown
+$dropdown-link-active-bg: $primary;
+$dropdown-link-hover-bg: $primary;
+$dropdown-link-hover-color: $white;
+// card
+$card-border-width: .125rem;
+$card-border-color: $tertiary;
+
+.btn.btn-primary {
+  --bs-btn-color: #f4f4f4;
+  --bs-btn-hover-color: #f4f4f4;
+  --bs-btn-hover-bg: #222;
+  --bs-btn-hover-border-color: #222;;
+  --bs-btn-focus-shadow-rgb: 214, 37, 37;
+  --bs-btn-active-color: #f9f9f9;
+  --bs-btn-active-bg: #444;
+  --bs-btn-active-border-color: #444;
+  --bs-btn-active-shadow: inset 0 3px 5px #444;
+  --bs-btn-disabled-color: #dbdbbd;
+  --bs-btn-disabled-bg: #444;
+  --bs-btn-disabled-border-color: #444;
+}
+
+@import 'bootstrap/scss/bootstrap';

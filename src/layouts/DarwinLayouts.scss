@@ -1,0 +1,48 @@
+.darwin-layout {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero {
+  .column-left {
+    flex: 0 0 60%;
+    position: relative;
+    .hero-heading {
+      font-size: 96px;
+      width: 100%;
+      padding-left: 2.5rem;
+    }
+    .hero-caption {
+      position: absolute;
+      left: -5.5rem;
+      top: 12.5rem;
+      transform: rotate(-90deg);
+    }
+  }
+  .column-right {
+    flex: 0 0 40%;
+    img {
+      width: auto;
+      height: auto;
+      margin-left: -5rem;
+      margin-top: -5rem;
+    }
+  }
+}
+
+.intro {
+  .row {
+    border-bottom: thin solid #dbdbdb;
+  }
+
+  .column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .heading {
+      width: 100%;
+    }
+  }
+}
