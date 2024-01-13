@@ -6,7 +6,11 @@
 }
 
 .hero {
-  .column-left {
+  .hero__row {
+    display: flex;
+  }
+
+  .hero__column-left {
     flex: 0 0 60%;
     position: relative;
     .hero-heading {
@@ -17,11 +21,11 @@
     .hero-caption {
       position: absolute;
       left: -5.5rem;
-      top: 12.5rem;
+      top: 8rem;
       transform: rotate(-90deg);
     }
   }
-  .column-right {
+  .hero__column-right {
     flex: 0 0 40%;
     img {
       width: auto;
@@ -33,16 +37,21 @@
 }
 
 .intro {
-  .row {
+  .intro__row {
     border-bottom: thin solid #dbdbdb;
+    display: flex;
   }
 
-  .column {
+  .intro__column {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
+    padding: 2rem 0;
     .heading {
       width: 100%;
+      display: flex;
+      align-items: center;
     }
   }
 }

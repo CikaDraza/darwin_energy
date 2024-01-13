@@ -1,3 +1,5 @@
+@use '../../custom.scss' as *;
+
 .header {
   display: flex;
   flex-direction: column;
@@ -23,7 +25,7 @@
   max-width: 295px;
 }
 
-.logo img {
+.logo svg {
   width: 295px;
   height: auto;
 }
@@ -93,12 +95,16 @@
 
 .autocomplete-dropdown {
   position: absolute;
-  z-index: 2;
-  background-color: #DBDBDB;
+  z-index: 5;
+  background-color: $light;
   width: 200px;
   padding: .5rem;
   border-radius: .5rem;
   margin-top: .25rem;
+  min-width: 280px;
+  .suggestion-item {
+    cursor: pointer;
+  }
 }
 
 .bottom-header {
@@ -132,7 +138,7 @@
   border-left: 1px solid #000;
 }
 
-.dropdown-menu {
+.drop-menu {
   position: absolute;
   width: 100%;
   z-index: 3;
@@ -145,7 +151,7 @@
   display: none;
 }
 
-.dropdown-menu ul {
+.drop-menu ul {
   border-left: 0.5pt solid #000;
   width: 100%;
   list-style: none;
@@ -159,34 +165,34 @@
   border-bottom-right-radius: .5rem;
 }
 
-.dropdown-menu ul li {
+.drop-menu ul li {
   padding: .5rem;
   padding-top: 0;
   box-sizing: border-box;
   cursor: pointer;
 }
 
-.dropdown-menu ul li:hover {
+.drop-menu ul li:hover {
   color: var(--hover-color);
 }
 
-.dropdown-enter {
+.drop-enter {
   display: block;
   opacity: 0;
   transform: translateY(-20px);
 }
 
-.dropdown-enter-active {
+.drop-enter-active {
   opacity: 1;
   transform: translateY(0);
   transition: opacity 300ms, transform 300ms;
 }
 
-.dropdown-exit {
+.drop-exit {
   opacity: 1;
 }
 
-.dropdown-exit-active {
+.drop-exit-active {
   opacity: 0;
   transition: opacity 300ms;
 }

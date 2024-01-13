@@ -1,0 +1,8 @@
+@use '../../custom.scss' as *;
+
+.selected-brand {
+  background-color: $primary;
+  color: $white;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

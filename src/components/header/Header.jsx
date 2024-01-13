@@ -1,10 +1,11 @@
 import { Link, NavLink } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import productData from '../../../src/assets/data/products.json'
-import './Header.css';
+import './Header.scss';
 import { useRef, useState } from 'react';
 import Autocomplete from '../autocomplete/Autocomplete';
 import Dropdown from './Dropdown';
+import DarwinLogo from '../../assets/icons/DarwinLogo';
 
 export default function Header() {
   const [showProductsDropdown, setShowProductsDropdown] = useState(false);
@@ -26,7 +27,7 @@ export default function Header() {
         <div className="top-header">
           <div className="logo">
             <Link to="/">
-              <img src="/icons/Darwin_Logo.png" alt="darwin logo" />
+              <DarwinLogo />
             </Link>
           </div>
           <div className='navigation'>
@@ -65,7 +66,7 @@ export default function Header() {
               nodeRef={dropdownRef}
               >
               <div onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave} ref={dropdownRef} className={showProductsDropdown ? "dropdown-menu" : "dropdown-menu hidden"}>
+              onMouseLeave={handleMouseLeave} ref={dropdownRef} className={showProductsDropdown ? "drop-menu" : "drop-menu hidden"}>
                 <ul>
                   {
                     productData.map(item => (

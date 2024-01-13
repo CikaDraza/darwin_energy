@@ -1,3 +1,5 @@
+@use '../../custom.scss' as *;
+
 .row_shop {
   display: flex;
   flex-wrap: wrap;
@@ -28,4 +30,14 @@
 
 aside.column_shop {
   flex: 0 0 25%;
+}
+
+.chips {
+  background-color: $tertiary;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
