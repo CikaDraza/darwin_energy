@@ -1,6 +1,6 @@
 @use '../../custom.scss' as *;
 
-.selected-brand {
+.selected-brand.list-group-item {
   background-color: $primary;
   color: $white;
   border-top-left-radius: 0;

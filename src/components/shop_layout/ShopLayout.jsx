@@ -87,7 +87,7 @@ console.log(selectedBrand);
           <Row>
           {
           products.map(product => (
-            <Col key={product._id} lg={4} xl={3}>
+            <Col key={product._id} xs={12} md={6} lg={4} xxl={3}>
               <Card product={product} />
             </Col>
           ))
