@@ -286,7 +286,7 @@ export default function SectionFourColumn() {
   };
 
   return (
-    <div className='section-four-column' style={{ display: 'flex', height: '100%' }}>
+    <div className='section-four-column' style={{ display: 'flex' }}>
       {['People', 'Products', 'Finances', 'Systems'].map((column) => (
         <motion.div
           key={column}
